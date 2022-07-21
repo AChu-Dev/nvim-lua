@@ -10,7 +10,7 @@ return require('packer').startup(function()
         use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
 	      use {'preservim/nerdtree'}
         use {'junegunn/vim-easy-align'}
-	      use {'airblade/vim-gitgutter'}
+	      use {'airblade/vim-gitgutter', on = 'GitGutterEnable'}
 	      use {'ryanoasis/vim-devicons'}
         use "williamboman/nvim-lsp-installer"
         use {"nvim-telescope/telescope.nvim", requires = {{'nvim-lua/plenary.nvim'}}}
