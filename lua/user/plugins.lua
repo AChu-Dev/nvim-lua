@@ -7,6 +7,7 @@ return require('packer').startup(function()
         use {'sonph/onehalf'}
 	      --Code Addons
 	      use {'neovim/nvim-lspconfig'}
+        use { 'mhartington/formatter.nvim' }
         use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
 	      use {'preservim/nerdtree'}
         use {'junegunn/vim-easy-align'}
@@ -20,4 +21,6 @@ return require('packer').startup(function()
         use "L3MON4D3/LuaSnip"
         use "saadparwaiz1/cmp_luasnip"
         use "onsails/lspkind-nvim"
+        use "rafcamlet/nvim-whid"
+        use "AChu-Dev/nvim-wpm-trainer"
 end)

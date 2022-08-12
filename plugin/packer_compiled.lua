@@ -129,6 +129,16 @@ _G.packer_plugins = {
     path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["nvim-whid"] = {
+    loaded = true,
+    path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-whid",
+    url = "https://github.com/rafcamlet/nvim-whid"
+  },
+  ["nvim-wpm-trainer"] = {
+    loaded = true,
+    path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-wpm-trainer",
+    url = "https://github.com/AChu-Dev/nvim-wpm-trainer"
+  },
   onehalf = {
     loaded = true,
     path = "/home/mii/.local/share/nvim/site/pack/packer/start/onehalf",
