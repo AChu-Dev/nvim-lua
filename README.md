@@ -52,22 +52,22 @@ The Leader Key in Vi and its derivatives is a key which in command mode is used 
 
 # Install Guide
 ```
-$ sudo yum install lua
-$ sudo yum install npm
-$ sudo yum module install nodejs:16
+$ sudo pacman -S lua
+$ sudo pacman -S  npm
+$ sudo pacman -S nodejs
 $ python3 -m pip install pynvim --user
 $ npm install -g neovim
 ```
 > These are external packages that need to be installed via linux  
 
 ```
-git clone --depth 1 git@gitlab.int.asvuk.com:mirror/neovim/packer.nvim.git
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 > Packer needs to be cloned to a specific place as well as being included in this repository
 
 ```
-git clone --depth 1 git@gitlab.int.asvuk.com:adam.chu/nvim_lua_config.git
+git clone --depth 1 https://github.com/AChu-Dev/nvim-lua\
  ~/.config/nvim
 ```
 > This repo needs to be cloned to a specific place
