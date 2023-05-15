@@ -1,4 +1,5 @@
-local colourscheme1 = "github_dark_default"
+local colourscheme1 = "github_dark_high_contrast"
+--local colourscheme1 = 'silverhand'
 --local colourscheme1 = 'silverhand'
 local colourscheme2 = "onehalfdark" -- backup colourscheme
 

@@ -1,28 +1,27 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+local status_ok, mason_lsp_installer = pcall(require, "mason-lspconfig")
+if status_ok then
+    mason_lsp_installer.setup()
+end
 if not status_ok then
-	return
+  return 
 end
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
-	local opts = {
-		on_attach = require("user.lsp.handlers").on_attach,
-		capabilities = require("user.lsp.handlers").capabilities,
-	}
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+  return 
+end
 
-	 --if server.name == "sumneko_lua" then
-	 --	local sumneko_opts = require("user.lsp.settings.sumneko_lua")
-	 --	opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-	 --end
+-- the above is enough, but if you want to replicate the "on_server_ready" behaviour
+-- where your installed servers are setup "automatically" you can do the following
+mason_lsp_installer.setup_handlers {
+    -- default handler - setup with default settings
+    function (server_name)
+        lspconfig[server_name].setup { on_attach = require("user.lsp.handlers").on_attach, capabilities = require("user.lsp.handlers").capabilities}
+    end,
 
--- enable if you have custom pyright 
---	 if server.name == "pyright" then
---	 	local pyright_opts = require("user.lsp.settings.pyright")
---	 	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
---	 end
+   -- Example of an override per LSP
+   --["jdtls"] = function ()
+   --  ["jdtls"].setup {opts, } 
+   -- end
+}
 
-	-- This setup() function is exactly the same as lspconfig's setup function.
-	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-	server:setup(opts)
-end)

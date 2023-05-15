@@ -114,6 +114,16 @@ _G.packer_plugins = {
     path = "/home/mii/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/mii/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/mii/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   nerdtree = {
     loaded = true,
     path = "/home/mii/.local/share/nvim/site/pack/packer/start/nerdtree",
@@ -123,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -139,16 +144,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/mii/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["nvim-whid"] = {
-    loaded = true,
-    path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-whid",
-    url = "https://github.com/rafcamlet/nvim-whid"
-  },
-  ["nvim-wpm-trainer"] = {
-    loaded = true,
-    path = "/home/mii/.local/share/nvim/site/pack/packer/start/nvim-wpm-trainer",
-    url = "https://github.com/AChu-Dev/nvim-wpm-trainer"
   },
   onehalf = {
     loaded = true,
